@@ -25,5 +25,11 @@ public class Usuario {
 
     @Column(name = "senha", nullable = false)
     private String senha;
+/**/
+    public Usuario(String _nome, String _email, String _senha){
+        this.nome = _nome;
+        this.email = _email;
+        this.senha = _senha;
+    }
 
 }
