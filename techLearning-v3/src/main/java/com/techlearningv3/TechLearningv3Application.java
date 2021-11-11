@@ -1,0 +1,21 @@
+package com.techlearningv3;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+
+@SpringBootApplication
+public class TechLearningv3Application {
+
+    @Bean
+    public ModelMapper modelMapper(){
+        ModelMapper modelMapper = new ModelMapper();
+        modelMapper.getConfiguration().setSkipNullEnabled(true);
+        return modelMapper;
+    }
+
+	public static void main(String[] args)  {
+        SpringApplication.run(TechLearningv3Application.class, args);
+	}
+}
